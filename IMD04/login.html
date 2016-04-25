@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+    <title>DVD Rental</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="DVD Rental">
+
+        
+        <!-- Google Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+        <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'> <!-- Main Title Font -->
+
+		<!-- CSS Plugins -->
+		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="inc/animations/css/animate.min.css"> 
+		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons --> 
+
+		<!-- CSS -->
+        <!--<link rel="stylesheet" href="css/reset.css"> -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/mobile.css">
+		<link rel="stylesheet" href="css/skin/cool-gray.css"> <!-- The gray colour scheme -->
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+<script type = "text/javascript">
+
+    function validateForm() {
+        var un = document.myform.usr.value;
+        var pw = document.myform.pword.value;
+        var username = "username"; 
+        var password = "password";
+        if ((un == username) && (pw == password)) {
+            return true;
+        }
+        else {
+            alert ("Login was unsuccessful, please check your username and password");
+            return false;
+        }
+  }
+
+</script>
+	</head>
+
+    <body data-spy="scroll" data-target="#main-navbar">
+
+    	<div class="body">
+        
+            <header id="header" class="header-main">
+
+                <!-- Navbar -->
+                <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+                  <div class="container">
+
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Home</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container -->
+                </nav>
+                <!-- End Navbar -->
+
+            </header>
+            
+                
+        	
+            
+              <!-- Begin Services -->
+            <form name="myform" id="myform" onSubmit="return validateForm();" action="index2.html" method="post">
+            
+            <section id="services-section" class="page text-center">
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <fieldset id="DrinkSummary">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <br /> <!-- this just adds a bit of breathing space -->
+                            <h2>Log In</h2>
+                            <div class="divider"></div>
+                            <p class="subtitle">Please Enter the login details below</p>
+                        </div>
+                        </fieldset>
+                    </div>
+                </div>
+                  <label>User Name:</label>
+                        <input type="text" name="usr" placeholder="username" style="margin-right:40px; margin-left: 5px;"> 
+                        <label>Password:</label>
+                        <input type="password" name="pword" placeholder="password" style="margin-right:40px; margin-left: 5px;">
+                        <input type="submit" value="Login"/>
+                        <br /><br />
+                <br />
+                <p><a href="register.html">Register Here</a></p>
+            </form> 
+              
+                
+           
+                                              
+        </div><!-- body ends -->
+        
+        
+      
+ <!-- keep these at the bottom - plugins used for all animations/scrolling/interactions -->        
+        <!-- Plugins JS -->
+		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
+		<script src="inc/bootstrap/js/bootstrap.min.js"></script>
+		<script src="inc/owl-carousel/js/owl.carousel.min.js"></script> <!-- Images appear when scrolled to -->
+		<script src="inc/stellar/js/jquery.stellar.min.js"></script> <!-- parallax scroll -->
+        <script src="inc/animations/js/wow.min.js"></script>
+        
+
+		<!-- Theme JS -->
+	<script src="js/theme.js"></script>
+
+    </body> 
+        
+            
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+    <title>DVD Rental</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="DVD Rental">
+
+        
+        <!-- Google Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+        <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'> <!-- Main Title Font -->
+
+		<!-- CSS Plugins -->
+		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="inc/animations/css/animate.min.css"> 
+		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons --> 
+
+		<!-- CSS -->
+        <!--<link rel="stylesheet" href="css/reset.css"> -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/mobile.css">
+		<link rel="stylesheet" href="css/skin/cool-gray.css"> <!-- The gray colour scheme -->
+        
+        <script type="text/javascript" language="JavaScript" src="mylibrary.js"> </script>
+<script type="text/javascript" language="JavaScript">
+
+<!--
+var movies = new Array("Legend", "TheRelevant", "JurassicWorld", "HungerGames", "Spectre", "Cinderella", "BatmanvSuperman", "Avengers","TheHuntsman", "Furious7", "RideAlong2", "TheWeddingRinger", "IntheHeartoftheSea", "Insurgent");
+var itemqty = 0;
+function showCookies(){
+    for (i=0;i<movies.length;i++){
+		 var qtyWanted = GetCookie(myform[i]);
+        itemqty = qtyWanted ? qtyWanted : "0";
+        document.myform[movies[i]+"qty"].value = itemqty;
+    }
+}
+function addToCart(DVDName){
+    itemqty = document.myform[DVDName + "qty"].value;
+    itemqty = parseInt(itemqty);
+    SetCookie(DVDName,itemqty);
+    var feedback = "An order for " + itemqty + " DVD(s) of ";
+    feedback += DVDName.toUpperCase();
+    feedback += " has been added to your shopping cart.";
+    feedback += " Please click 'Check Out' when finished."
+    alert(feedback);
+}
+function checkOut(){
+    window.location.href = "checkout.html";
+}
+//-->
+</script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+    <body data-spy="scroll" data-target="#main-navbar" onload="showCookies();">
+    	<div class="body">
+        
+            <header id="header" class="header-main">
+
+                 <!-- Navbar -->
+                <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+                  <div class="container">
+
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="movies.html">Movies</a></li>
+                            <li><a href="rentalform.html">Movie Rental</a></li>
+                            <li><a href="CalculatorRental.html">Calculator</a></li>
+                            <li><a href="HungerGamesQuiz.html">Quiz</a></li>     
+   
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container -->
+                </nav>
+                <!-- End Navbar -->
+
+            </header>
+            
+                
+        	<!-- Begin text carousel intro section -->
+			<section id="text-carousel-intro-section" class="parallax"  style="background-image: url(img/dvdrental.jpg)">
+				
+				<div class="container">
+					<div class="caption text-center text-white" >
+
+							<div class="item">
+								<h1 class="maintitle">Rental <br />
+                                    Form</h1>
+                                <div class="extra-space-l"></div>
+								<a class="btn btn-blank" href="#services-section" role="button">Enter Details</a>
+							</div>
+							
+					</div> <!-- /.caption -->
+				</div> <!-- /.container -->
+
+			</section>
+			<!-- End text carousel intro section -->
+            
+                       <!-- Begin Services -->
+            <form name="myform" id="myform" method="POST" action="form-to-email.php">
+            
+            <section id="services-section" class="page text-center">
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <fieldset id="DrinkSummary">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <br /> <!-- this just adds a bit of breathing space -->
+                            <h2>Rental Form</h2>
+                            <div class="divider"></div>
+                            <p class="subtitle">Please enter your details in the form below</p>
+                        </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <!-- End page header-->        
+                
+				<fieldset id="contactdetails" class="text-center wow zoomIn">
+                   
+					<h3>Personal Details</h3>
+                   <br />
+ 
+					<label for="FirstName" class="labelpadding">First Name: </label> <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required> * <br />
+                    <br />
+					<label for="LastName" class="labelpadding">Last Name: </label> <input type="text" name="LastName" id="LastName" placeholder="Last Name" required> * <br />
+                    <br />
+					<label for="EmailAdd">Email Address: </label> <input type="email" name="EmailAddress" id="EmailAdd" placeholder="Email Address" required> *<br />
+                    <br />
+					<label for="HouseNumber" class="labelpadding">House Number: </label> <input type="text" name="HouseNumber" id="HouseNumber" placeholder="House Number" required> * <br />
+                    <br />
+                    <label for="Address" class="labelpadding">Address: </label> <input type="text" name="Address" id="Address" placeholder="Address" required> * <br />
+                    <br />
+                    <label for="Postcode" class="labelpadding">Postcode: </label> <input type="text" name="Postcode" id="Postcode" placeholder="Postcode" required> * <br />
+                    <br />
+                    <label for="City" class="labelpadding">City: </label> <input type="text" name="City" id="City" placeholder="City" required> *                       <br />
+                </fieldset>
+    
+                <br />
+                <br />
+ 			
+				 <fieldset id="Details" class="text-center wow zoomIn">
+                     
+					<h3>Rental Details</h3>
+                  <br />		
+<table border="0" align="center">
+<tr>
+<td align="center">
+<h4>Legend</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="Legendqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('Legend');">
+</p>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<h4>The Relevant</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="TheRelevantqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('TheRelevant');" name="rev" id="rev">
+</p>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<h4>Jurassic World</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="JurassicWorldqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('JurassicWorld');">
+</p>
+</td>
+</tr>
+  
+<tr>
+<td align="center">
+<h4>Hunger Games</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="HungerGamesqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('HungerGames');">
+</p>
+</td>
+</tr>
+  
+<tr>
+<td align="center">
+<h4>Spectre</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="Spectreqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('Spectre');">
+</p>
+</td>
+</tr>
+ 
+<tr>
+<td align="center">
+<h4>Cinderella</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="Cinderellaqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('Cinderella');">
+</p>
+</td>
+</tr>
+
+ <tr>
+<td align="center">
+<h4>Batman V Superman</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="BatmanvSupermanqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('BatmanvSuperman');">
+</p>
+</td>
+</tr>   
+
+ <tr>
+<td align="center">
+<h4>Averngers</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="Avengersqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('Avengers');">
+</p>
+</td>
+</tr>   
+   
+ <tr>
+<td align="center">
+<h4>The Huntsman</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="TheHuntsmanqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('TheHuntsman');">
+</p>
+</td>
+</tr>   
+
+ <tr>
+<td align="center">
+<h4>Deadpool</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="Deadpoolqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('Deadpool');">
+</p>
+</td>
+</tr>   
+     
+<tr>
+<td align="center">
+<h4>Fast and Furious 7</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="Furious7qty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('Furious7');">
+</p>
+</td>
+</tr>
+
+  <tr>
+<td align="center">
+<h4>Ride Along 2</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="RideAlong2qty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('RideAlong2');">
+</p>
+</td>
+</tr>    
+
+  <tr>
+<td align="center">
+<h4>The Wedding Ringer</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="TheWeddingRingerqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('TheWeddingRinger');">
+</p>
+</td>
+</tr>
+  
+  <tr>
+<td align="center">
+<h4>In the Heart of the Sea</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br />
+<input type="TEXT" name="IntheHeartoftheSeaqty" size="6" value="0"><br />
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('IntheHeartoftheSea');">
+</p>
+</td>
+</tr> 
+  
+<td align="center">
+<h4>Insurgent</h4>
+</td>
+<td align="center">
+<p><b>Quantity:</b><br>
+<input type="TEXT" name="Insurgentqty" size="6" value="0"><br>
+<b>	&#163;3 each</b></p><br />
+</td>
+<td align="center">
+<p><input type="button" value="Add to Cart" onclick="addToCart('Insurgent');">
+</p>
+</td>
+</tr> 
+</table>
+<br /><br />
+                     
+                      <label for="StartDate" class="labelpadding">Start Date: </label> <input type="date" name="StartDate" id="StartDate" placeholder="StartDate" required> *                       <br /><br />
+                     <label for="EndDate" class="labelpadding">End Date: </label> <input type="date" name="EndDate" id="EndDate" placeholder="EndDate" required> *                       <br /><br />
+                    <label for="NumberOfNights" class="=labelpadding">Number of Nights: </label> <input type="text" name="NumberOfNights" id="NumberOfNights" placeholder="NumberOfNights" required> *   
+                    <br />
+                    <br />
+                    <br />	
+                     
+				</fieldset>
+                <br />
+                <br />
+
+
+				<fieldset type="text" id="additionalcomments" class="text-center wow zoomIn">
+                    
+					<h3>Additional Comments</h3>
+                <br />
+                    <br />
+                    
+						<textarea cols="60" rows="4" placeholder="Enter Comment" id="additionalcomments" name="additionalcomments"> </textarea>
+                    <br /><br />
+						
+						No Comment? <input type="checkbox">
+							
+				</fieldset>
+        
+                <p> * Marked as Required Fields </p>
+				<br />
+                <br />
+ 
+        <div id="bottombuttons" class="text-center wow fadeInUp">
+        <button class="orderbutton" type="Submit" value="Check Out" name="Submit" id="Submit" onclick="checkOut();">Submit</button>
+            <button class="orderbutton" type="reset" value="Clear">Reset</button>
+            <button class="orderbutton" type="button" value="back" onclick="window.history.back();">Back</button></a>
+        </div><!--Closes bottom buttons div -->
+
+
+</div>
+            </section>
+            <!-- End Services -->
+                  
+            </form>
+              
+          
+                
+
+                
+            <!-- Begin footer -->
+            <footer class="text-off-white">
+            
+                
+                
+                   <div class="footer">
+                    <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                        <p class="copyright">Copyright &copy; 2016 - DVD Rental App</p>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- End footer -->
+
+            <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->
+                                              
+        </div><!-- body ends -->
+        
+        
+      
+ <!-- keep these at the bottom - plugins used for all animations/scrolling/interactions -->        
+        <!-- Plugins JS -->
+		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
+		<script src="inc/bootstrap/js/bootstrap.min.js"></script>
+		<script src="inc/owl-carousel/js/owl.carousel.min.js"></script> <!-- Images appear when scrolled to -->
+		<script src="inc/stellar/js/jquery.stellar.min.js"></script> <!-- parallax scroll -->
+        <script src="inc/animations/js/wow.min.js"></script>
+        
+
+		<!-- Theme JS -->
+	<script src="js/theme.js"></script>
+
+    </body> 
+        
+            
+</html>
+9

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+    <title>DVD Rental</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="DVD Rental">
+
+        
+        <!-- Google Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+        <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'> <!-- Main Title Font -->
+
+		<!-- CSS Plugins -->
+		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="inc/animations/css/animate.min.css"> 
+		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons --> 
+
+		<!-- CSS -->
+        <!--<link rel="stylesheet" href="css/reset.css"> -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/mobile.css">
+		<link rel="stylesheet" href="css/skin/cool-gray.css"> <!-- The gray colour scheme -->
+        
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+        
+        <!-- SLIDESHOW SCRIPT-->
+<script language="JAVASCRIPT" type="text/javascript">
+<!--
+/*Callout: Here the image objects are stored in an array.*/
+var mySlides = new Array();
+mySlides[1] = new Image();
+mySlides[2] = new Image();
+mySlides[3] = new Image();
+mySlides[4] = new Image();
+mySlides[5] = new Image();
+mySlides[6] = new Image();
+
+mySlides[1].src = "legend.jpg";
+mySlides[2].src = "the_revenant.jpg";
+mySlides[3].src = "images/opera_house.jpg";
+mySlides[4].src = "images/didgeridoo.jpg";
+mySlides[5].src = "images/film.jpg";
+mySlides[6].src = "images/old_building.jpg";
+
+/*Callout: The text captions are stored in another array.*/
+var myCaptions = new Array();
+myCaptions[1] = "The flag of Australia is red, white, and blue. ";
+myCaptions[1] += "Each color has philosophical significance.";
+myCaptions[2] = "We arrived in Australia and actually saw a kanagroo.";
+myCaptions[3] = "The Grand Opera House in Sydney is overwhelming.";
+myCaptions[4] = "Didgeridoos are an instrument native to Australia.";
+myCaptions[5] = "The Australian outback was used as a film set for the 1979 Mad Max.";
+myCaptions[6] = "One of the most beautiful buildings in Australia, the Old Melbourne Exhibition Building.";
+
+var slidenumber = 1;
+var totalslides = mySlides.length - 1;
+
+function showSlide(direction){
+    if (direction == "next"){
+        (slidenumber == totalslides) ? slidenumber = 1 : slidenumber++;
+    }else{
+        (slidenumber == 1) ? slidenumber = totalslides : slidenumber--; 
+    }
+    if (document.images){
+        document.slideframe.src = mySlides[slidenumber].src;
+        document.slidecontrols.caption.value = myCaptions[slidenumber];
+        document.slidecontrols.currentslide.value = slidenumber;
+    }
+}
+    
+    var myAds = new Array();
+myAds[1] = new Image();
+myAds[2] = new Image();
+myAds[3] = new Image();
+myAds[4] = new Image();
+myAds[5] = new Image();
+myAds[6] = new Image();
+myAds[7] = new Image();
+myAds[8] = new Image();
+myAds[9] = new Image();
+myAds[10] = new Image();
+myAds[11] = new Image();
+myAds[12] = new Image();
+myAds[13] = new Image();
+myAds[14] = new Image();
+myAds[15] = new Image();
+
+myAds[1].src = "img/movies/legend.jpg";
+myAds[2].src = "img/movies/the_revenant.jpg";
+myAds[3].src = "img/movies/jurassic_world.jpg";
+myAds[4].src = "img/movies/hg_mockingjay2.jpg";
+myAds[5].src= "img/movies/spectre.jpg";
+myAds[6].src= "img/movies/cinderella.jpg";
+myAds[7].src= "img/movies/batman_v_superman.jpg";
+myAds[8].src= "img/movies/avengers_aou.jpg";
+myAds[9].src= "img/movies/the_huntsman.jpg";
+myAds[10].src= "img/movies/deadpool.jpg";
+myAds[11].src= "img/movies/furious7.jpg";
+myAds[12].src= "img/movies/ride_along2.jpg";
+myAds[13].src= "img/movies/the_wedding_ringer.jpg";
+myAds[14].src= "img/movies/in_the_heart_of_the_sea.jpg";
+myAds[15].src= "img/movies/insurgent.jpg";
+/* Callout: The timings represent the number of milliseconds delay between the images.*/
+var myTimings = new Array();
+myTimings[1] = 3000;
+myTimings[2] = 3000;
+myTimings[3] = 3000;
+myTimings[4] = 3000;
+myTimings[5] = 3000;
+myTimings[6] = 3000;
+myTimings[7] = 3000;
+myTimings[8] = 3000;
+myTimings[9] = 3000;
+myTimings[10] = 3000;
+myTimings[11] = 3000;
+myTimings[12] = 3000;
+myTimings[13] = 3000;
+myTimings[14] = 3000;
+myTimings[15] = 3000;
+    
+
+var mySites = new Array();
+mySites[1] = "movies.html";
+mySites[2] = "movies.html";
+mySites[3] = "movies.html";
+mySites[4] = "movies.html";
+mySites[5] = "movies.html";
+mySites[6] = "movies.html";
+mySites[7] = "movies.html";
+mySites[8] = "movies.html";
+mySites[9] = "movies.html";
+mySites[10] = "movies.html";
+mySites[11] = "movies.html";
+mySites[12] = "movies.html";
+mySites[13] = "movies.html";
+mySites[14] = "movies.html";
+mySites[15] = "movies.html";
+
+var adnumber = 0;
+var totalads = myAds.length - 1;
+var timerID = "";
+
+function startBanner(){
+    adnumber = 0;
+    showAd();
+}
+function showAd(){
+    if (document.images){
+        //Callout: This condition ensures that each image loads completely before the next image appears in the sequence. 
+        if (document.myBanner.complete){
+            adnumber++;
+            (adnumber > totalads) ? adnumber=1 : adnumber=adnumber;
+            document.myBanner.src = myAds[adnumber].src;
+        }
+        timerID = setTimeout("showAd()",myTimings[adnumber]);
+    }
+}
+function goSite(){
+    clearTimeout(timerID);
+    window.location.href = mySites[adnumber];
+}
+//-->
+</script>
+    <!-- COOKIES -->    
+        <script language="JavaScript">
+<!--
+ function nameDefined(ckie,nme)
+{
+   var splitValues;
+   var i;
+   for (i=0;i<ckie.length;++i)
+   {
+      splitValues=ckie[i].split("=");
+      if (splitValues[0]==nme) return true;
+   }
+   return false;
+}
+
+function delBlanks(strng)
+{
+   var result="";
+   var i;
+   var chrn;
+   for (i=0;i<strng.length;++i) {
+      chrn=strng.charAt(i);
+      if (chrn!=" ") result += chrn;
+   }
+   return result;
+}
+
+function getCookieValue(ckie,nme)
+{
+   var splitValues;
+   var i;
+   for(i=0;i<ckie.length;++i) {
+      splitValues=ckie[i].split("=");
+      if(splitValues[0]==nme) return splitValues[1];
+   }
+   return "";
+}
+
+function insertCounter() {
+ readCookie();
+ displayCounter();
+}
+
+function displayCounter() {
+ document.write('<p>');
+ document.write("Welcome! You've visited this page ");
+ if(counter==1) document.write("for the first time.");
+ else document.write(counter+" times.");
+ document.writeln('</p>');
+ }
+ 
+function readCookie() {
+ var cookie=document.cookie;
+ counter=0;
+ var chkdCookie=delBlanks(cookie);  //are on the client computer
+ var nvpair=chkdCookie.split(";");
+ if(nameDefined(nvpair,"pageCount"))
+ counter=parseInt(getCookieValue(nvpair,"pageCount"));
+ ++counter;
+ var futdate = new Date();
+ var expdate = futdate.getTime();
+ expdate += 3600000 * 24 *30;  //expires in 1 hour
+ futdate.setTime(expdate);
+
+ var newCookie="pageCount="+counter;
+ newCookie += "; expires=" + futdate.toGMTString();
+ window.document.cookie=newCookie;
+}
+// -->
+
+</script>
+	</head>
+
+    <body data-spy="scroll" data-target="#main-navbar" onload="startBanner();" align="CENTER">
+    	<div class="body">
+        
+            <header id="header" class="header-main">
+
+                <!-- Navbar -->
+                <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+                  <div class="container">
+
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Home</a></li>   
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container -->
+                </nav>
+                <!-- End Navbar -->
+
+            </header>
+            
+                
+        	<!-- Begin text carousel intro section -->
+			<section id="text-carousel-intro-section" class="parallax"  style="background-image: url(img/dvdrental.jpg)">
+				
+				<div class="container">
+					<div class="caption text-center text-white" >
+
+							<div class="item">
+								<h1 class="maintitle">DVD Rentals</h1>
+								<p>Select from the most popular movies today!</p>
+                                <div class="extra-space-l"></div>
+								<a class="btn btn-blank" href="login.html" role="button">Login</a>
+							</div>
+                        <br />
+                        <br />
+                        <script language="JavaScript">
+                            <!--
+                                insertCounter();
+                            // -->
+                            </script>
+							
+					</div> <!-- /.caption -->
+				</div> <!-- /.container -->
+
+			</section>
+			<!-- End text carousel intro section -->
+            
+                  
+            <!-- Begin footer -->
+            <footer class="text-off-white">
+            
+                
+                
+                   <div class="footer">
+                    <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                        <p class="copyright">Copyright &copy; 2016 - DVD Rental App</p>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- End footer -->
+
+            <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->
+                                              
+        </div><!-- body ends -->
+        
+        
+      
+ <!-- keep these at the bottom - plugins used for all animations/scrolling/interactions -->        
+        <!-- Plugins JS -->
+		<!-- keep these at the bottom - plugins used for all animations/scrolling/interactions -->        
+        <!-- Plugins JS -->
+		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
+		<script src="inc/owl-carousel/js/owl.carousel.min.js"></script> <!-- Images appear when scrolled to -->
+		<script src="inc/stellar/js/jquery.stellar.min.js"></script> <!-- parallax scroll -->
+        <script src="inc/animations/js/wow.min.js"></script>
+        
+        
+
+		<!-- Theme JS -->
+	<script src="js/theme.js"></script>
+
+    </body> 
+        
+            
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+    <title>DVD Rental</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="DVD Rental">
+
+        
+        <!-- Google Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+        <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'> <!-- Main Title Font -->
+
+		<!-- CSS Plugins -->
+		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="inc/animations/css/animate.min.css"> 
+		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons --> 
+
+		<!-- CSS -->
+        <!--<link rel="stylesheet" href="css/reset.css"> -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/mobile.css">
+		<link rel="stylesheet" href="css/skin/cool-gray.css"> <!-- The gray colour scheme -->
+        
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+    <body data-spy="scroll" data-target="#main-navbar">
+    	<div class="body">
+        
+            <header id="header" class="header-main">
+
+                  <!-- Navbar -->
+                <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+                  <div class="container">
+
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="movies.html">Movies</a></li>
+                            <li><a href="rentalform.html">Movie Rental</a></li>
+                            <li><a href="CalculatorRental.html">Calculator</a></li>
+                            <li><a href="HungerGamesQuiz.html">Quiz</a></li>  
+                            <li><a href="ContactUs.html">Contact</a></li>    
+   
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container -->
+                </nav>
+                <!-- End Navbar -->
+
+            </header>
+            
+                
+        	<!-- Begin text carousel intro section -->
+			<section id="text-carousel-intro-section" class="parallax"  style="background-image: url(img/dvdrental.jpg)">
+				
+				<div class="container">
+					<div class="caption text-center text-white" >
+
+							<div class="item">
+								<h1 class="maintitle">Registration <br />
+                                    Form</h1>
+                                <div class="extra-space-l"></div>
+								<a class="btn btn-blank" href="#services-section" role="button">Enter Details</a>
+							</div>
+							
+					</div> <!-- /.caption -->
+				</div> <!-- /.container -->
+
+			</section>
+			<!-- End text carousel intro section -->
+            
+                       <!-- Begin Services -->
+            <form name="myform" id="myform" method="POST" action="form-to-email.php">
+            
+            <section id="services-section" class="page text-center">
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <fieldset id="DrinkSummary">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <br /> <!-- this just adds a bit of breathing space -->
+                            <h2>Registration Form</h2>
+                            <div class="divider"></div>
+                            <p class="subtitle">Please enter your details in the form below</p>
+                        </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <!-- End page header-->        
+                
+				<fieldset id="contactdetails" class="text-center wow zoomIn">
+                   
+					<h3>Personal Details</h3>
+                   <br />
+ 
+					<label for="FirstName" class="labelpadding">First Name: </label> <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required> * <br />
+                    <br />
+					<label for="LastName" class="labelpadding">Last Name: </label> <input type="text" name="LastName" id="LastName" placeholder="Last Name" required> * <br />
+                    <br />
+					<label for="Password">Password: </label> <input type="password" name="password" id="password" placeholder="Password" required> *<br />
+                    <br />
+                    <br />
+					<label for="EmailAdd">Email Address: </label> <input type="email" name="EmailAddress" id="EmailAdd" placeholder="Email Address" required> *<br />
+                    <br />
+                    <br />
+					<label for="telephone">Contact Number: </label> <input type="tel" name="tel" id="tel" placeholder="Contact Number" required> *<br />
+                    <br />
+					<label for="HouseNumber" class="labelpadding">House Number: </label> <input type="text" name="HouseNumber" id="HouseNumber" placeholder="House Number" required> * <br />
+                    <br />
+                    <label for="Address" class="labelpadding">Address: </label> <input type="text" name="Address" id="Address" placeholder="Address" required> * <br />
+                    <br />
+                    <label for="Postcode" class="labelpadding">Postcode: </label> <input type="text" name="Postcode" id="Postcode" placeholder="Postcode" required> * <br />
+                    <br />
+                    <label for="City" class="labelpadding">City: </label> <input type="text" name="City" id="City" placeholder="City" required> *                       <br />
+                </fieldset>
+    
+                <br />
+        
+                <p> * Marked as Required Fields </p>
+				<br />
+                <br />
+ 
+        <div id="bottombuttons" class="text-center wow fadeInUp">
+         <a href="login.html"><button class="orderbutton" type="Submit" value="Submit" name="Submit" id="Submit" >Submit</button></a>
+            <button class="orderbutton" type="reset" value="Clear">Reset</button>
+            <button class="orderbutton" type="button" value="back" onclick="window.history.back();">Back</button></a>
+        </div><!--Closes bottom buttons div -->
+ 
+            </section>
+            <!-- End Services -->
+                  
+            </form>
+               
+            <!-- Begin footer -->
+            <footer class="text-off-white">
+            
+                
+                
+            <!-- Begin footer -->
+            <footer class="text-off-white">
+            
+                
+                
+                   <div class="footer">
+                    <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                        <p class="copyright">Copyright &copy; 2016 - DVD Rental App</p>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- End footer -->
+
+            <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->
+                                              
+        </div><!-- body ends -->
+        
+        
+      
+ <!-- keep these at the bottom - plugins used for all animations/scrolling/interactions -->        
+        <!-- Plugins JS -->
+		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
+		<script src="inc/bootstrap/js/bootstrap.min.js"></script>
+		<script src="inc/owl-carousel/js/owl.carousel.min.js"></script> <!-- Images appear when scrolled to -->
+		<script src="inc/stellar/js/jquery.stellar.min.js"></script> <!-- parallax scroll -->
+        <script src="inc/animations/js/wow.min.js"></script>
+        
+
+		<!-- Theme JS -->
+	<script src="js/theme.js"></script>
+
+    </body> 
+        
+            
+</html>
+9

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+    <title>DVD Rental</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="DVD Rental">
+
+        
+        <!-- Google Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+        <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'> <!-- Main Title Font -->
+
+		<!-- CSS Plugins -->
+		<link rel="stylesheet" href="inc/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="inc/animations/css/animate.min.css"> 
+		<link rel="stylesheet" href="inc/font-awesome/css/font-awesome.min.css"> <!-- Font Icons --> 
+
+		<!-- CSS -->
+        <!--<link rel="stylesheet" href="css/reset.css"> -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/mobile.css">
+		<link rel="stylesheet" href="css/skin/cool-gray.css"> <!-- The gray colour scheme -->
+        
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <script type="text/javascript" language="JavaScript">
+    
+        <!--
+    
+        function calculate(){
+	   var Number = document.getElementById("Number").value;
+	   var Nights = document.getElementById("Nights").value;
+	   var PricePerNight = document.getElementById("PricePerNight").value;
+       var Postage = document.getElementById("Postage").value;
+    
+	   var Total =  (((Number * Nights) * PricePerNight) + 1.00);
+		
+	   document.getElementById("Total").innerHTML = Total;	
+        }
+
+            -->
+    
+</script>
+	</head>
+
+    <body data-spy="scroll" data-target="#main-navbar">
+    	<div class="body">
+        
+            <header id="header" class="header-main">
+
+                <!-- Navbar -->
+                <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+                  <div class="container">
+
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                           <li><a href="index.html">Home</a></li>
+                            <li><a href="movies.html">Movies</a></li>
+                            <li><a href="rentalform.html">Movie Rental</a></li>
+                            <li><a href="CalculatorRental.html">Calculator</a></li>
+                            <li><a href="HungerGamesQuiz.html">Quiz</a></li>     
+   
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container -->
+                </nav>
+                <!-- End Navbar -->
+
+            </header>
+            
+                
+        	<!-- Begin text carousel intro section -->
+			<section id="text-carousel-intro-section" class="parallax"  style="background-image: url(img/dvdrental.jpg)">
+				
+				<div class="container">
+					<div class="caption text-center text-white" >
+
+							<div class="item">
+								<h1 class="maintitle">Calculate Rental <br />
+                                                        Price </h1>
+                                <div class="extra-space-l"></div>
+								<a class="btn btn-blank" href="#services-section" role="button">Calculate!</a>
+							</div>
+							
+					</div> <!-- /.caption -->
+				</div> <!-- /.container -->
+
+			</section>
+			<!-- End text carousel intro section -->
+            
+            <!-- Begin Services -->
+            <section id="services-section" class="page text-center">
+                <!-- Begin page header-->
+                <div class="page-header-wrapper">
+                    <div class="container">
+                        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                            <br /> <!-- this just adds a bit of breathing space -->
+                            <h2>Rentals</h2>
+                            <div class="divider"></div>
+                            <p class="subtitle">Calculate the Price of your Rental!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End page header-->
+          
+                <form action="" method="post" name="calcform" id="calcform">
+                    <div>
+                        Number of DVD Rentals
+                        <input id="Number" type="text" placeholder="DVD Rentals" />
+                    </div><br />
+                    <div>
+                        Nights to be taken out over
+                        <input id="Nights" type="text" placeholder="No of Nights" />
+                    </div><br />
+                    <div>
+                        Price Per Night
+                        <select id="PricePerNight">
+                            <option value="3.00">£3.00</option>
+                        </select>
+                    </div><br />
+                    <div>
+                    Postage
+                    <select id="Postage">
+                        <option value="1.00">£1.00</option>
+                    </select><br /><br />
+                    </div>
+                    <div>
+                        <h4><bold>Total Cost(£): <span id="Total"></span></bold></h4> 
+                    </div>
+                    <br /><br />
+                    <input type="button" name="mybutton" value="Calculate Rental Cost" onclick="calculate()">
+               
+            </section>
+            <!-- End Services -->
+              
+            </form>    
+                
+            <!-- Begin footer -->
+            <footer class="text-off-white">
+            
+                
+                
+                 <div class="footer">
+                    <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
+                        <p class="copyright">Copyright &copy; 2016 - DVD Rental App</p>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- End footer -->
+
+            <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->
+                                              
+        </div><!-- body ends -->
+        
+        
+      
+ <!-- keep these at the bottom - plugins used for all animations/scrolling/interactions -->        
+       <!-- keep these at the bottom - plugins used for all animations/scrolling/interactions -->        
+        <!-- Plugins JS -->
+		<script src="inc/jquery/jquery-1.11.1.min.js"></script>
+		<script src="inc/owl-carousel/js/owl.carousel.min.js"></script> <!-- Images appear when scrolled to -->
+		<script src="inc/stellar/js/jquery.stellar.min.js"></script> <!-- parallax scroll -->
+        <script src="inc/animations/js/wow.min.js"></script>
+        
+        
+
+		<!-- Theme JS -->
+	<script src="js/theme.js"></script>
+
+    </body> 
+        
+            
+</html>

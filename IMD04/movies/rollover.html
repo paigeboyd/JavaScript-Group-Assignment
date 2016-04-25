@@ -1,0 +1,78 @@
+<html><head><title>Rollover Websites</title>
+<script type='text/javascript' language='Javascript'>
+<!--
+var favouritewebsiteON = new Image;
+var avengersON = new Image;
+var facebookON = new Image;
+var youtubeON = new Image;
+
+var favouritewebsiteOFF = new Image;
+var avengersOFF = new Image;
+var facebookOFF = new Image;
+var youtubeOFF = new Image;
+
+var favouritewebsiteINFO = new Image;
+var com311INFO = new Image;
+var facebookINFO = new Image;
+var youtubeINFO = new Image;
+
+favouritewebsiteON.src = "images/favouritewebsiteon.png";
+avengersON.src = "images/avengerson.jpg";
+   
+facebookON.src = "images/facebookon.png";
+  
+youtubeON.src = "images/youtubeon.png";
+
+
+favouritewebsiteOFF.src = "images/favouritewebsiteoff.png";
+avengersOFF.src = "images/avengersoff.jpg";
+
+facebookOFF.src = "images/facebookoff.png";
+   
+youtubeOFF.src = "images/youtubeoff.png";
+
+favouritewebsiteINFO.src = "images/info.png";
+com311INFO.src = "images/com311info.png";
+facebookINFO.src = "images/facebookinfo.png";
+youtubeINFO.src = "images/youtubeinfo.png";
+
+function swapImage(version, imagename){
+    if (document.images){
+		document[imagename].src = eval(imagename + version + ".src");
+		/* Callout: This statement makes the info version of each image appear at the bottom of the page.*/
+ 		document['info'].src = eval(imagename + "INFO.src");
+   }
+}
+
+
+function rollOffAll(){
+    swapImage('OFF','avengers');
+    swapImage('OFF','facebook');
+    swapImage('OFF','youtube');
+    swapImage('OFF','favouritewebsite');
+}
+//-->
+</script>
+</head>
+<body bgcolor="white">
+<div align="center">
+<a href="com311blog.html" onmouseover="swapImage('ON','greatactors');" onmouseout="rollOffAll();" onclick="rollOffAll();return true;">
+<img src="images/favouritewebsiteoff.png" width="250" height="40" name="favouritewebsite" border="0" alt="Favourite Website"></a> 
+<hr>
+<br>
+<a href="com311blog.html" onmouseover="swapImage('ON','avengers');" onmouseout="rollOffAll();" onclick="rollOffAll();return true;">
+<img src="images/avengersoff.jpg" width="150" name="avengers" border="0" alt="COM311"></a>
+<a href="https://www.facebook.com/" onmouseover="swapImage('ON','facebook');" onmouseout="rollOffAll();" onclick="rollOffAll();return true;">
+<img src="images/facebookoff.png" width="150" name="facebook"
+border="0" alt="Facebook"></a>
+<a href="https://www.youtube.com/" onmouseover="swapImage('ON','youtube');"
+onmouseout="rollOffAll();" onclick="rollOffAll();return true;">
+<img src="images/youtube.png" width="150"  name=
+"youtube" border="0" alt="YouTube"></a>
+<hr>
+<a href="#" onmouseover="rollOffAll();" onmouseout="rollOffAll();"
+onclick="rollOffAll();return false;"><img src="images/info.png"
+width="250" height="40" name="info" border="0" alt="Dates"></a>
+</div>
+</body>
+</html>
