@@ -10,3 +10,11 @@ Assignment marked based on JavaScript tasks including:
 - JavaScript Login
 - JavaScript Slideshow
 - Shopping Cart
+ 
+
+Live Link: <a href="http://scm.ulster.ac.uk/~B00664007/imd04/">JS Assignment</a>
+
+Login Details: 
+Username = username
+Password = password
+
